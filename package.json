@@ -1,0 +1,29 @@
+{
+  "name": "dsh-dfy-bqb",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "大肥鱼表情包插件：读懂抖音私信与评论内容，按情绪自主选择表情包回复（纯文字/纯表情/文字+表情），支持网搜、二创、豆包原创、主人投放四种来源，情绪一致性硬闸防错配。",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "check": "node selfcheck.mjs --syntax",
+    "test": "node selfcheck.mjs --test",
+    "selfcheck": "node selfcheck.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "douyin",
+    "sticker",
+    "meme",
+    "emotion",
+    "dfy"
+  ],
+  "license": "MIT"
+}

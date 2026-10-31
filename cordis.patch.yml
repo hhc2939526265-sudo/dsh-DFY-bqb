@@ -1,0 +1,45 @@
+# DSH bundle patch：dsh plugin add 后按此激活「大肥鱼表情包」插件
+# 所有字段都能在设置页改；这里给的是安全默认值。
+plugins:
+  - id: dfy-bqb
+    name: 大肥鱼表情包
+    path: ./index.js
+    config:
+      enabled: true
+      # 底座 dsh-douyin-scroll 的安装目录（留空则自动发现常见 DSH 插件目录）
+      basePath: ''
+      # 无底座时使用离线假通道，保证插件可独立加载与自检
+      offline: false
+      # 表情库与状态文件存放目录（留空则用 ~/.dsh/dfy-bqb）
+      dataDir: ''
+      # 主人单独投放表情的文件夹（来源④）
+      ownerDropDir: ''
+      # 回复场景开关
+      enableDm: true
+      enableComment: true
+      # 回复形态概率（私信）：文字+表情 / 纯表情 / 纯文字
+      dmStickerChance: 0.45
+      dmPureStickerChance: 0.15
+      # 评论区更保守：默认不发纯表情图片
+      commentStickerChance: 0.3
+      commentPureStickerChance: 0
+      # 风控：每日贴纸上限、同一对象每日贴纸上限
+      dailyStickerLimit: 5
+      perPeerStickerLimit: 2
+      # 豆包 GUI 自动化生图（来源③），需要豆包已登录
+      doubao:
+        enabled: false
+        exePath: ''
+        # 生成完成后图片保存/下载目录（留空则用系统下载目录）
+        downloadDir: ''
+        timeoutSec: 180
+      # 外网搜索（来源①）
+      webSearch:
+        enabled: true
+        # 每次搜索最多下载候选数
+        maxCandidates: 8
+      # 二创（来源②，ffmpeg 本地加字/截帧）
+      derive:
+        enabled: true
+      # 轮询间隔秒
+      pollIntervalSec: 60
